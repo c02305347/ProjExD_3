@@ -120,8 +120,7 @@ class Score:
         self.fonto = pg.font.SysFont("hgp創英角ポップ体", 30)
         self.score = 0
         self.img = self.fonto.render(f"SCORE : {self.score}", True, (0, 0, 255))
-        
-        
+          
 
     def update(self, screen):
         """
@@ -132,7 +131,6 @@ class Score:
         screen.blit(self.img, [100, HEIGHT-50])
 
     
-
 class Bomb:
     """
     爆弾に関するクラス
