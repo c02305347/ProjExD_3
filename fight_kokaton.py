@@ -131,11 +131,7 @@ class Score:
         self.img = self.fonto.render(f"SCORE : {self.score}", True, (0, 0, 255))
         screen.blit(self.img, [100, HEIGHT-50])
 
-    def add_score(self):
-        """
-        呼び出された時にスコアを増やす
-        """
-        self.score += 1
+    
 
 class Bomb:
     """
@@ -208,7 +204,7 @@ def main():
                     #beam, bomb = None, None
                     beam, bombs[j] = None, None
                     bird.change_img(6, screen)
-                    score.add_score()
+                    score.score += 1
                     pg.display.update()   
 
         bombs = [bomb for bomb in bombs if bomb is not None]           
